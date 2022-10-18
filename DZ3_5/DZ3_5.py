@@ -12,10 +12,7 @@ def fibonacci(n):
         a, b = b, a + b
     a, b = 0, 1
     for i in range(num+1):
-        if a > 0:
-            fib_num.insert(0, a * -1)
-        else:
-            fib_num.insert(0, a)
+        fib_num.insert(0, a)
         a, b = b, a - b
     return fib_num
 
