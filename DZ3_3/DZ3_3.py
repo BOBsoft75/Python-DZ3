@@ -7,9 +7,10 @@ num = int(input('Введите количество элементов спис
 numList = []
 newList = []
 for i in range(num):
-    numList.append(round(((float(random.randrange(0, 10, 1))) + (float(random.randrange(0, 100, 1)))/100), 2))
+    numList.append(random.uniform(0, 10))
+    # numList.append(round(((float(random.randrange(0, 10, 1))) + (float(random.randrange(0, 100, 1)))/100), 2))
 for i in range(num):
-    newList.append(round((numList[i] - int(numList[i])), 2))
+    newList.append((numList[i] - int(numList[i])))
 maxElement = max(newList)
 minElement = min(newList)
-print(f'{numList} => {round((maxElement - minElement), 2)}')
+print(f'{numList} => {(maxElement - minElement)}')
